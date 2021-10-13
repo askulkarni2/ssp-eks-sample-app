@@ -1355,6 +1355,13 @@ cdk8s-plus-17@^1.0.0-beta.10:
   dependencies:
     minimatch "^3.0.4"
 
+cdk8s-plus-20@^1.0.0-beta.16:
+  version "1.0.0-beta.16"
+  resolved "https://registry.yarnpkg.com/cdk8s-plus-20/-/cdk8s-plus-20-1.0.0-beta.16.tgz#c7d8eb260e0d3f084d4f76d80fea0338266f1c8b"
+  integrity sha512-Xjcq7nKaUlR8y2U0hYdlHRyTO93u3PYyejOBYrJKA6l4HaUoZQWfJuG8i2JJFOQgd0xcgcLB/v46fzVP9qkBgw==
+  dependencies:
+    minimatch "^3.0.4"
+
 cdk8s-plus-22@^1.0.0-beta.21:
   version "1.0.0-beta.21"
   resolved "https://registry.yarnpkg.com/cdk8s-plus-22/-/cdk8s-plus-22-1.0.0-beta.21.tgz#4e6f81721c82ea11ec8a66cd1e012d7c9d30550b"

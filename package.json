@@ -42,6 +42,7 @@
   "dependencies": {
     "cdk8s": "^1.0.0-beta.10",
     "cdk8s-plus-17": "^1.0.0-beta.10",
+    "cdk8s-plus-20": "^1.0.0-beta.16",
     "constructs": "^3.2.34"
   },
   "bundledDependencies": [],

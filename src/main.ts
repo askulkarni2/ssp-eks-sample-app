@@ -1,38 +1,17 @@
+import { App, Chart } from 'cdk8s';
 import { Construct } from 'constructs';
-import { App, Chart, ChartProps, ApiObject } from 'cdk8s';
+import { NextJsService } from './nextjs-service';
 
-export class MyChart extends Chart {
-  constructor(scope: Construct, id: string, props: ChartProps = { }) {
-    super(scope, id, props);
+export class NextJsChart extends Chart {
+  constructor(scope: Construct, ns: string) {
+    super(scope, ns);
 
-    const label = { app: 'hello-k8s' };
-
-
-
-    new ApiObject(this, 'deployment', {
-      apiVersion: "v1",
-      kind: "Pod",
-      metadata: {
-          namespace: "frontend",
-          name: "nginx",
-          labels: label,
-      },
-      spec: {
-          containers: [{
-              name: "nginx",
-              image: "nginx:1.14-alpine",
-              resources: {
-                  limits: {
-                      memory: "20Mi",
-                      cpu: 0.2,
-                  },
-              },
-          }],
-      },
+    new NextJsService(this, ns, {
+      image: 'paulbouwer/hello-kubernetes:1.10.0',
     });
   }
 }
 
 const app = new App();
-new MyChart(app, 'hello');
+new NextJsChart(app, 'team-burnham');
 app.synth();

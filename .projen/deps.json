@@ -94,6 +94,10 @@
       "type": "runtime"
     },
     {
+      "name": "cdk8s-plus-20",
+      "type": "runtime"
+    },
+    {
       "name": "cdk8s",
       "version": "^1.0.0-beta.10",
       "type": "runtime"
